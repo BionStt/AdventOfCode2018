@@ -46,6 +46,22 @@ namespace Tests
         }
 
         [Fact]
+        public void ExampleInputPartTwo()
+        {
+            var lines = new string[]
+            {
+                "+1",
+                "+1",
+                "-1"
+            };
+
+            var fpm = new FindPlusMinus(lines, 0);
+            var frequency = fpm.GetModifiedFrequencyWithMultiple();
+
+            Assert.Equal(1, frequency);
+        }
+
+        [Fact]
         public void RepeatFrequency()
         {
             var fpm = new FindPlusMinus(@"C:\Users\joshu\source\repos\AdventOfCode2018\AdventOfCode2018\DayOne\input.txt", 0);
