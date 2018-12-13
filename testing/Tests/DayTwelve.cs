@@ -13,22 +13,37 @@ namespace Tests
         {
             var lines = new string[]
             {
-                "2 3 0 3 10 11 12 1 1 0 1 99 2 1 1 2",
+                "initial state: #..#.#..##......###...###",
+                "",
+                "...## => #",
+                "..#.. => #",
+                ".#... => #",
+                ".#.#. => #",
+                ".#.## => #",
+                ".##.. => #",
+                ".#### => #",
+                "#.#.# => #",
+                "#.### => #",
+                "##.#. => #",
+                "##.## => #",
+                "###.. => #",
+                "###.# => #",
+                "####. => #"
             };
 
-            var mm = new Starter(lines);
-            var answer = 1; // mm.PartOne();
+            var ss = new SubterraneanSustainability(lines);
+            var answer = ss.PartOne();
 
-            Assert.Equal(138, answer);
+            Assert.Equal(325, answer);
         }
 
         [Fact]
         public void PartOne()
         {
-            var mm = new Starter(@"C:\Users\joshu\github\AdventOfCode2018\src\DayTwelve\input.txt");
-            var answer = 1; // mm.PartOne();
+            var mm = new SubterraneanSustainability(@"C:\Users\joshu\github\AdventOfCode2018\src\DayTwelve\input.txt");
+            var answer = mm.PartOne();
 
-            Assert.Equal(44893, answer);
+            Assert.Equal(2040, answer);
         }
 
         [Fact]
@@ -39,7 +54,7 @@ namespace Tests
                 "2 3 0 3 10 11 12 1 1 0 1 99 2 1 1 2",
             };
 
-            var mm = new Starter(lines);
+            var mm = new SubterraneanSustainability(lines);
             var answer = 1; //mm.PartTwo();
 
             Assert.Equal(66, answer);
@@ -48,8 +63,8 @@ namespace Tests
         [Fact]
         public void PartTwo()
         {
-            var mm = new Starter(@"C:\Users\joshu\github\AdventOfCode2018\src\DayTwelve\input.txt");
-            var answer = 1; // mm.PartTwo();
+            var ss = new SubterraneanSustainability(@"C:\Users\joshu\github\AdventOfCode2018\src\DayTwelve\input.txt", 50000);
+            var answer = ss.PartOne();
 
             Assert.Equal(27433, answer);
         }
