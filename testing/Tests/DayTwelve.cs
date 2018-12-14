@@ -38,6 +38,97 @@ namespace Tests
         }
 
         [Fact]
+        public void ExamplePartOneT2()
+        {
+            var lines = new string[]
+            {
+                "initial state: #..#.#..##......###...###",
+                "",
+                "...## => #",
+                "..#.. => #",
+                ".#... => #",
+                ".#.#. => #",
+                ".#.## => #",
+                ".##.. => #",
+                ".#### => #",
+                "#.#.# => #",
+                "#.### => #",
+                "##.#. => #",
+                "##.## => #",
+                "###.. => #",
+                "###.# => #",
+                "####. => #"
+            };
+
+            var ss = new TryTwo(lines);
+            var answer = ss.PartOne();
+
+            Assert.Equal(325, answer);
+        }
+
+        [Fact]
+        public void PartOneT2()
+        {
+            var lines = new string[]
+            {
+                "initial state: ###....#..#..#......####.#..##..#..###......##.##..#...#.##.###.##.###.....#.###..#.#.##.#..#.#",
+                "",
+                "..### => #",
+                "...## => #",
+                "#.#.# => #",
+                "##.## => #",
+                "#..#. => #",
+                ".#### => #",
+                ".#..# => #",
+                "##... => #",
+                ".#.#. => #",
+                "###.# => #",
+                "##### => #",
+                "#.##. => #",
+                ".#... => #",
+                ".#.## => #",
+                "###.. => #",
+                "#.#.. => #",
+            };
+
+            var ss = new TryTwo(lines);
+            var answer = ss.PartOne();
+
+            Assert.Equal(2040, answer);
+        }
+
+        [Fact]
+        public void PartTwoT2()
+        {
+            var lines = new string[]
+            {
+                "initial state: ###....#..#..#......####.#..##..#..###......##.##..#...#.##.###.##.###.....#.###..#.#.##.#..#.#",
+                "",
+                "..### => #",
+                "...## => #",
+                "#.#.# => #",
+                "##.## => #",
+                "#..#. => #",
+                ".#### => #",
+                ".#..# => #",
+                "##... => #",
+                ".#.#. => #",
+                "###.# => #",
+                "##### => #",
+                "#.##. => #",
+                ".#... => #",
+                ".#.## => #",
+                "###.. => #",
+                "#.#.. => #",
+            };
+
+            var ss = new TryTwo(lines);
+            var answer = ss.PartTwo();
+
+            Assert.Equal(1700000000011, answer);
+        }
+
+        [Fact]
         public void PartOne()
         {
             var mm = new SubterraneanSustainability(@"C:\Users\joshu\github\AdventOfCode2018\src\DayTwelve\input.txt");
