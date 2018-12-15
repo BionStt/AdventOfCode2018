@@ -54,19 +54,19 @@ namespace Tests
             };
 
             var cc = new ChocolateCharts(380621);
-            cc.PartOne(380621);
-            int answer = cc.PartTwo(380621);
+            //cc.PartOne(380621);
+            int answer = cc.PartTwo(51589);
 
-            Assert.Equal(6985103122, answer);
+            Assert.Equal(9, answer);
         }
 
         [Fact]
         public void PartTwo()
         {
             var cc = new ChocolateCharts(380621);
-            var answer = cc.PartTwo(51589);
+            var answer = cc.PartTwo(380621);
 
-            Assert.Equal(9, answer);
+            Assert.Equal(20182290, answer);
         }
     }
 }

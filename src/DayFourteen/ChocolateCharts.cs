@@ -50,6 +50,18 @@ namespace AdventOfCode2018.DayFourteen
             return sb.ToString();
         }
 
+        public string GetScoreString(int i)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var s in Scores.Skip(i).Take(100))
+            {
+                sb.Append(s);
+            }
+
+            return sb.ToString();
+        }
+
         public int PartTwo(int n)
         {
             int e1 = 0, e2 = 1;
@@ -64,10 +76,10 @@ namespace AdventOfCode2018.DayFourteen
 
                 e1 = (e1 + Scores[e1] + 1) % Scores.Count;
                 e2 = (e2 + Scores[e2] + 1) % Scores.Count;
-                s = GetScoreString();
+                s = GetScoreString(Scores.Count - 100);
             }
 
-            return s.IndexOf(n.ToString());
+            return GetScoreString().IndexOf(n.ToString());
 
             
         }
