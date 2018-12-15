@@ -13,10 +13,15 @@ namespace Tests
         {
             var lines = new string[]
             {
-                "2 3 0 3 10 11 12 1 1 0 1 99 2 1 1 2",
+                @"/->-\        ",
+                @"|   |  /----\",
+                @"| /-+--+-\  |",
+                @"| | |  | v  |",
+                @"\-+-/  \-+--/",
+                @"  \------/   "
             };
 
-            var mm = new Starter(lines);
+            var mm = new MineCartMadness(lines);
             var answer = 1; // mm.PartOne();
 
             Assert.Equal(138, answer);
@@ -25,7 +30,7 @@ namespace Tests
         [Fact]
         public void PartOne()
         {
-            var mm = new Starter(@"C:\Users\joshu\github\AdventOfCode2018\src\DayThirteen\input.txt");
+            var mm = new MineCartMadness(@"C:\Users\joshu\github\AdventOfCode2018\src\DayThirteen\input.txt");
             var answer = 1; // mm.PartOne();
 
             Assert.Equal(44893, answer);
@@ -36,10 +41,15 @@ namespace Tests
         {
             var lines = new string[]
             {
-                "2 3 0 3 10 11 12 1 1 0 1 99 2 1 1 2",
+                @"/->-\        ",
+                @"|   |  /----\",
+                @"| /-+--+-\  |",
+                @"| | |  | v  |",
+                @"\-+-/  \-+--/",
+                @"  \------/   "
             };
 
-            var mm = new Starter(lines);
+            var mm = new MineCartMadness(lines);
             var answer = 1; //mm.PartTwo();
 
             Assert.Equal(66, answer);
@@ -48,7 +58,7 @@ namespace Tests
         [Fact]
         public void PartTwo()
         {
-            var mm = new Starter(@"C:\Users\joshu\github\AdventOfCode2018\src\DayThirteen\input.txt");
+            var mm = new MineCartMadness(@"C:\Users\joshu\github\AdventOfCode2018\src\DayThirteen\input.txt");
             var answer = 1; // mm.PartTwo();
 
             Assert.Equal(27433, answer);
